@@ -10,6 +10,7 @@ namespace ConsoleTest.weiyong
     {
         public static void Test()
         {
+
             Console.WriteLine("测试");
         }
     }
