@@ -1,0 +1,7 @@
+H:\魏勇\Miscellaneous\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+H:\魏勇\Miscellaneous\ConsoleTest\bin\Debug\ConsoleTest.exe
+H:\魏勇\Miscellaneous\ConsoleTest\bin\Debug\ConsoleTest.pdb
+H:\魏勇\Miscellaneous\ConsoleTest\obj\Debug\ConsoleTest.csprojAssemblyReference.cache
+H:\魏勇\Miscellaneous\ConsoleTest\obj\Debug\ConsoleTest.csproj.CoreCompileInputs.cache
+H:\魏勇\Miscellaneous\ConsoleTest\obj\Debug\ConsoleTest.exe
+H:\魏勇\Miscellaneous\ConsoleTest\obj\Debug\ConsoleTest.pdb
