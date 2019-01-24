@@ -14,7 +14,7 @@ namespace ConsoleTest
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
-        {
+        { 
             Ts.Test();
             Console.ReadKey();
         }
