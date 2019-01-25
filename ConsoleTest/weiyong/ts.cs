@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary.缩略图;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,10 @@ namespace ConsoleTest.weiyong
     {
         public static void Test()
         {
-
-            Console.WriteLine("测试");
+            string a= @"C:\Users\wy\Pictures\Screenshots\屏幕截图(1).png";
+            string b = @"C:\Users\wy\Pictures\Screenshots\屏幕截图(2).bmp";
+            Thumbnail.GetThumbnail(a, b, 100, 100);
+            Console.WriteLine("成功");
         }
     }
 }
