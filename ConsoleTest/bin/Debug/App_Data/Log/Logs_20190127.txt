@@ -1,0 +1,6 @@
+2019-01-27 20:32:32,340 [1] DEBUG ClassLibrary.CommHelper - 调试信息
+2019-01-27 20:32:32,351 [1] WARN  ClassLibrary.CommHelper - 警告信息
+2019-01-27 20:32:32,351 [1] ERROR ClassLibrary.CommHelper - 错误信息
+2019-01-27 20:32:55,215 [1] DEBUG ClassLibrary.CommHelper - 调试信息
+2019-01-27 20:32:55,226 [1] WARN  ClassLibrary.CommHelper - 警告信息
+2019-01-27 20:32:55,227 [1] ERROR ClassLibrary.CommHelper - 错误信息
