@@ -8,3 +8,13 @@ H:\魏勇\Miscellaneous\ConsoleTest\obj\Debug\ConsoleTest.pdb
 H:\魏勇\Miscellaneous\ConsoleTest\bin\Debug\ClassLibrary.dll
 H:\魏勇\Miscellaneous\ConsoleTest\bin\Debug\ClassLibrary.pdb
 H:\魏勇\Miscellaneous\ConsoleTest\obj\Debug\ConsoleTest.csproj.CopyComplete
+D:\MyProject\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+D:\MyProject\ConsoleTest\bin\Debug\ConsoleTest.exe
+D:\MyProject\ConsoleTest\bin\Debug\ConsoleTest.pdb
+D:\MyProject\ConsoleTest\bin\Debug\ClassLibrary.dll
+D:\MyProject\ConsoleTest\bin\Debug\ClassLibrary.pdb
+D:\MyProject\ConsoleTest\obj\Debug\ConsoleTest.csprojAssemblyReference.cache
+D:\MyProject\ConsoleTest\obj\Debug\ConsoleTest.csproj.CoreCompileInputs.cache
+D:\MyProject\ConsoleTest\obj\Debug\ConsoleTest.csproj.CopyComplete
+D:\MyProject\ConsoleTest\obj\Debug\ConsoleTest.exe
+D:\MyProject\ConsoleTest\obj\Debug\ConsoleTest.pdb

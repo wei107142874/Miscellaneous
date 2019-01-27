@@ -7,3 +7,12 @@ H:\魏勇\Miscellaneous\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileIn
 H:\魏勇\Miscellaneous\ClassLibrary\obj\Debug\ClassLibrary.csproj.CopyComplete
 H:\魏勇\Miscellaneous\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\魏勇\Miscellaneous\ClassLibrary\obj\Debug\ClassLibrary.pdb
+D:\MyProject\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\MyProject\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\MyProject\ClassLibrary\bin\Debug\Dewey.dll
+D:\MyProject\ClassLibrary\bin\Debug\Dewey.Drawing.dll
+D:\MyProject\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
+D:\MyProject\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\MyProject\ClassLibrary\obj\Debug\ClassLibrary.csproj.CopyComplete
+D:\MyProject\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\MyProject\ClassLibrary\obj\Debug\ClassLibrary.pdb
