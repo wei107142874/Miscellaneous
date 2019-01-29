@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <link rel="stylesheet" href="cssrest.css">
+    <link rel="stylesheet" href="icon/iconfont.css">
+    <style>
+        #mydiv {
+            padding: 1rem 0 0 1rem;
+            width: 100%;
+        }
+
+        ul>li {
+            cursor: pointer;
+            height: 3rem;
+            line-height: 3rem;
+            display: inline-block;
+            width: 100%;
+            /* background: #F5F6F7; */
+        }
+
+        ul>li:hover {
+            background: #F5F6F7;
+        }
+
+        .li_a {
+            width: 80%;
+            float: left;
+        }
+
+        .li_b {
+            width: 15%;
+            float: right;
+            margin: 0 1rem 0 0;
+        }
+
+        .li_hide {
+            display: none;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $("#my_ul li").click(function () {
+                var id = $(this).attr("kid");
+                var name = $(this).attr("text");
+                select(id, name);
+            })
+        })
+
+        //选择下拉
+        function select(id, name) {
+            $("#my_ul>li").hide();
+            $("#my_ul>li[pid=" + id + "]").show();
+
+
+            $("#nav").append(
+                ' <a href="#" onclick="deldom(this),select(0,' + name + ')">'
+                + '<span>' + name + '</span>'
+                + '</a>'
+
+            );
+        }
+
+        //移除后面标签
+        function deldom(self) {
+            $(self).nextAll().remove();
+            $(self).remove();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="mydiv">
+        <div id="nav">
+            <a href="#" onclick="select(0,'公司'),deldom(this)">
+                <span>公司</span>
+            </a>
+            <span class="slash">/</span>
+            <a href="#" onclick="deldom(this),select(1,'总裁办公室')">
+                <span>总裁办公室</span>
+            </a>
+            <span class="slash">/</span>
+            <a href="#" onclick="deldom(this),select(2,'扫地地')">
+                <span>扫地地</span>
+            </a>
+        </div>
+
+        <ul id="my_ul">
+            <li kid="1" pid="0">
+                <div class="li_a">
+                    总裁办公室(8人)
+                </div>
+                <div class="li_b" title="下一级">
+                    <span class="icon iconfont"></span>
+                    <span>下级</span>
+                </div>
+            </li>
+            <li kid="2" pid="0">
+                <div class="li_a">
+                    总裁办公室(8人)
+                </div>
+                <div class="li_b" title="下一级">
+                    <span class="icon iconfont"></span>
+                    <span>下级</span>
+                </div>
+            </li>
+            <li kid="3" pid="0">
+                <div class="li_a">
+                    总裁办公室(8人)
+                </div>
+                <div class="li_b" title="下一级">
+                    <span class="icon iconfont"></span>
+                    <span>下级</span>
+                </div>
+            </li>
+            <li kid="4" pid="0">
+                <div class="li_a">
+                    管理员
+                </div>
+                <div class="li_b li_hide" title="下一级">
+                    <span class="icon iconfont"></span>
+                    <span>下级</span>
+                </div>
+            </li>
+            <li class="li_hide" kid="5" pid="1" text="移动事业组">
+                <div class="li_a">
+                    移动事业组
+                </div>
+                <div class="li_b" title="下一级">
+                    <span class="icon iconfont"></span>
+                    <span>下级</span>
+                </div>
+            </li>
+            <li class="li_hide" kid="6" pid="1">
+                <div class="li_a">
+                    基础业务组(8人)
+                </div>
+                <div class="li_b" title="下一级">
+                    <span class="icon iconfont"></span>
+                    <span>下级</span>
+                </div>
+            </li>
+            <li class="li_hide" kid="7" pid="1">
+                <div class="li_a">
+                    你大爷
+                </div>
+                <div class="li_b" title="下一级">
+                    <span class="icon iconfont"></span>
+                    <span>下级</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
