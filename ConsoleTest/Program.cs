@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleTest
 {
+    /// <summary>
+    /// Update-Package -reinstall
+    /// </summary>
     class Program
     {
         /// <summary>

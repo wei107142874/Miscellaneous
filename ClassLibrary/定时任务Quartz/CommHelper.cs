@@ -8,7 +8,8 @@ namespace ClassLibrary
     public static partial class CommHelper
     {
         /// <summary>
-        /// Install-Package Quartz -Version 2.5.0        /// Quartz.Net 中的概念：计划者（IScheduler）、工作（IJob）、触发器（Trigger）。给计划者
+        /// Install-Package Quartz -Version 2.5.0
+        /// Quartz.Net 中的概念：计划者（IScheduler）、工作（IJob）、触发器（Trigger）。给计划者
         /// 一个工作(Job)，让他在 Trigger（什么条件下做这件事）触发的条件下执行这个工作(Job)
         /// 将要定时执行的任务的代码写到实现 IJob 接口的 Execute 方法中即可，时间到来的时候
         /// Execute 方法会被调用。
