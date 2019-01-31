@@ -72,45 +72,24 @@
   </style>
   <script>
     $(function () {
-      var data = [
-        { id: 1, pId: 0, name: '北京', num: 0 },
-        { id: 2, pId: 0, name: '天津' },
-        { id: 3, pId: 0, name: '上海' },
-        { id: 6, pId: 0, name: '重庆' },
-        { id: 4, pId: 0, name: '河北省', num: 3 },
-        { id: 41, pId: 4, name: '石家庄' },
-        { id: 42, pId: 4, name: '保定' },
-        { id: 43, pId: 4, name: '邯郸' },
-        { id: 44, pId: 4, name: '承德' },
-        { id: 5, pId: 0, name: '广东省' },
-        { id: 51, pId: 5, name: '广州' },
-        { id: 52, pId: 5, name: '深圳' },
-        { id: 53, pId: 5, name: '东莞' },
-        { id: 54, pId: 5, name: '佛山' },
-        { id: 6, pId: 0, name: '福建省' },
-        { id: 61, pId: 6, name: '福州' },
-        { id: 62, pId: 6, name: '厦门' },
-        { id: 63, pId: 6, name: '泉州' },
-        { id: 64, pId: 6, name: '三明' }
-      ];
+      var data =
+        [{ "Id": -1, "Name": "自来水公司", "DeptId": null, "DeptName": null, "JobIds": null, "JobNames": null, "GenderId": null, "GenderName": null, "UserName": null, "RoleIds": null, "RoleNames": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "CreateUserFlag": 0, "CreateUserText": "否", "PId": 0, "ParentId": 0, "text": "自来水公司", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": -1000001, "Name": "自来水二公司", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 0, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "否", "PId": 0, "ParentId": 0, "text": "自来水二公司", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": -1000020, "Name": "测试机构名", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 0, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "否", "PId": -1, "ParentId": -1, "text": "测试机构名", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": -1000022, "Name": "自来水公司1", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 0, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "否", "PId": 0, "ParentId": 0, "text": "自来水公司1", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000020, "Name": "弓长", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "弓长", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1, "Name": "管理员", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": 0, "ParentId": 0, "text": "管理员", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000002, "Name": "李科学", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1000001, "ParentId": -1000001, "text": "李科学", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 2, "Name": "维护员", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "维护员", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000001, "Name": "魏勇", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "魏勇", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000000, "Name": "覃宇", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "覃宇", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }];
 
-      js(data[4], data);
-      // for (var i = 0; i < data.length; i++) {
-      //   data[i].num = js(data[i], data);
-      // }
-      // console.log(data)
 
       var htm = ""
       $.each(data, function (index, item) {
         var li_hide = "li_hide";
-        if (item.pId == 0) {
+        if (item.PId == 0) {
           li_hide = "";
         }
-        htm += `<li kid="${item.id}" pid="${item.pId}" text="${item.name}" class="${li_hide}">
+        if (item.CreateUserFlag == 1) {
+
+        }
+        htm += `<li kid="${item.Id}" pid="${item.PId}" text="${item.Name}" class="${li_hide}">
                   <div class="li_a">
                     <div class="mui-input-row mui-checkbox mui-left">
-                      <label>${item.name}</label>
-                      <input name="checkbox" value="${item.id}" type="checkbox">
+                      <label>${item.Name}</label>
+                      <input name="checkbox" value="${item.Id}" type="checkbox">
                     </div>
                   </div>
                   <div class="li_b" title="下一级">
@@ -127,21 +106,6 @@
         nextselect(sli);
       });
     });
-
-    // function js(data) {
-    //   var childs = node.children, item;
-    //   //对node的处理
-    //   if (node) {
-    //     arr_dom.push(node);
-    //   }
-    //   for (var i = 0; i < childs.length; i++) {
-    //     item = childs[i];
-    //     if (item.nodeType === 1) {
-    //       //递归先序遍历子节点
-    //       preOrder(item);
-    //     }
-    //   }
-    // }
 
     //选择下拉
     function nextselect(self) {
@@ -183,7 +147,9 @@
       <!-- <li kid="1" pid="0" text="总裁办公室">
         <div class="li_a">
           <div class="mui-input-row mui-checkbox mui-left">
-            <label>总裁办公室</label>
+            <label> 
+              总裁办公室
+            </label>
             <input name="checkbox" value="1" type="checkbox">
           </div>
         </div>
