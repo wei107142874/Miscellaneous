@@ -26,6 +26,12 @@
     .mui-checkbox.mui-left input[type='checkbox'] {
       left: 0;
     }
+    .mui-input-row label{
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 35px;
+      line-height: 35px;
+    }
 
     .mui-radio.mui-left label,
     .mui-checkbox.mui-left label {
@@ -69,26 +75,46 @@
     .nav_active {
       color: #dddddd;
     }
+
+    .head_img{
+      background:#3296FA;
+      color: #ffffff; 
+      display:inline-block;
+      height: 100%;
+      width:36px;
+      text-align:center;
+      border-radius:20px;
+    }
+
   </style>
   <script>
     $(function () {
       var data =
         [{ "Id": -1, "Name": "自来水公司", "DeptId": null, "DeptName": null, "JobIds": null, "JobNames": null, "GenderId": null, "GenderName": null, "UserName": null, "RoleIds": null, "RoleNames": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "CreateUserFlag": 0, "CreateUserText": "否", "PId": 0, "ParentId": 0, "text": "自来水公司", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": -1000001, "Name": "自来水二公司", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 0, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "否", "PId": 0, "ParentId": 0, "text": "自来水二公司", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": -1000020, "Name": "测试机构名", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 0, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "否", "PId": -1, "ParentId": -1, "text": "测试机构名", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": -1000022, "Name": "自来水公司1", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 0, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "否", "PId": 0, "ParentId": 0, "text": "自来水公司1", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000020, "Name": "弓长", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "弓长", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1, "Name": "管理员", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": 0, "ParentId": 0, "text": "管理员", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000002, "Name": "李科学", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1000001, "ParentId": -1000001, "text": "李科学", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 2, "Name": "维护员", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "维护员", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000001, "Name": "魏勇", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "魏勇", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000000, "Name": "覃宇", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "覃宇", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }];
 
+      console.log(data)
+      js(data, 0)
 
       var htm = ""
       $.each(data, function (index, item) {
         var li_hide = "li_hide";
+        var head_img = {
+          class: "head_img",
+          name: item.Name.substring(item.Name.length - 2)
+        };
         if (item.PId == 0) {
           li_hide = "";
         }
-        if (item.CreateUserFlag == 1) {
-
+        if (item.CreateUserFlag == 0) {
+          head_img = { class: "", name: "" };
         }
         htm += `<li kid="${item.Id}" pid="${item.PId}" text="${item.Name}" class="${li_hide}">
                   <div class="li_a">
                     <div class="mui-input-row mui-checkbox mui-left">
-                      <label>${item.Name}</label>
+                      <label>
+                        <span class="${head_img.class}">${head_img.name}</span>
+                      ${item.Name}
+                      </label>
                       <input name="checkbox" value="${item.Id}" type="checkbox">
                     </div>
                   </div>
@@ -106,6 +132,23 @@
         nextselect(sli);
       });
     });
+
+    function js(data, num) {
+      var count = 0;
+      for (var i = num; i < data.length; i++) {
+        var obj = data[i];
+        for (var j = 0; j < data.length; j++) {
+          var jobj = data[j];
+          if (obj.Id == jobj.PId && obj.r != true) {
+            data[i].r = true;
+            js(data, num++);
+          }
+          else {
+
+          }
+        }
+      }
+    }
 
     //选择下拉
     function nextselect(self) {
@@ -144,10 +187,11 @@
     </div>
 
     <ul id="my_ul">
-      <!-- <li kid="1" pid="0" text="总裁办公室">
+      <li kid="1" pid="0" text="总裁办公室">
         <div class="li_a">
           <div class="mui-input-row mui-checkbox mui-left">
-            <label> 
+            <label>
+              <span class="head_img">总裁</span>
               总裁办公室
             </label>
             <input name="checkbox" value="1" type="checkbox">
@@ -157,7 +201,7 @@
           <span class="icon iconfont"></span> <span>下级</span>
         </div>
       </li>
-      <li kid="2" pid="0">
+      <!--  <li kid="2" pid="0">
         <div class="li_a">
           <div class="mui-input-row mui-checkbox mui-left">
             <label>总裁办公室</label>
