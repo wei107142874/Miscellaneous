@@ -2,161 +2,273 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
-    <link rel="stylesheet" href="cssrest.css">
-    <link rel="stylesheet" href="icon/iconfont.css">
-    <style>
-        #mydiv {
-            padding: 1rem 0 0 1rem;
-            width: 100%;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- 1. 强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览。 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+  <!-- 2. WebApp全屏模式 隐藏地址栏。 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 3. 禁止百度转码显示。 -->
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <!-- 4. 制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明） -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- 5. 添加到IOS主屏后的标题。 -->
+  <meta name="apple-mobile-web-app-title" content="标题名称">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../FrontEndPackage/css/mui.css">
+  <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+  <link rel="stylesheet" href="cssrest.css" />
+  <link rel="stylesheet" href="icon/iconfont.css" />
+  <style>
+    .mui-radio.mui-left input[type='radio'],
+    .mui-checkbox.mui-left input[type='checkbox'] {
+      left: 0;
+    }
+    .mui-input-row label{
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 35px;
+      line-height: 35px;
+    }
+
+    .mui-radio.mui-left label,
+    .mui-checkbox.mui-left label {
+      padding-left: 33px;
+    }
+
+    #mydiv {
+      padding: 1rem 0 0 1rem;
+      width: 100%;
+    }
+
+    ul>li {
+      cursor: pointer;
+      height: 2.8rem;
+      /* line-height: 3rem; */
+      display: inline-block;
+      width: 100%;
+      /* background: #F5F6F7; */
+    }
+
+    ul>li:hover {
+      background: #f5f6f7;
+    }
+
+    .li_a {
+      width: 80%;
+      float: left;
+    }
+
+    .li_b {
+      width: 15%;
+      float: right;
+      text-align: right;
+      margin: .5rem 1rem 0 0;
+    }
+
+    .li_hide {
+      display: none;
+    }
+
+    .nav_active {
+      color: #dddddd;
+    }
+
+    .head_img{
+      background:#3296FA;
+      color: #ffffff; 
+      display:inline-block;
+      height: 100%;
+      width:36px;
+      text-align:center;
+      border-radius:20px;
+    }
+
+  </style>
+  <script>
+    $(function () {
+      var data =
+        [{ "Id": -1, "Name": "自来水公司", "DeptId": null, "DeptName": null, "JobIds": null, "JobNames": null, "GenderId": null, "GenderName": null, "UserName": null, "RoleIds": null, "RoleNames": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "CreateUserFlag": 0, "CreateUserText": "否", "PId": 0, "ParentId": 0, "text": "自来水公司", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": -1000001, "Name": "自来水二公司", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 0, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "否", "PId": 0, "ParentId": 0, "text": "自来水二公司", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": -1000020, "Name": "测试机构名", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 0, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "否", "PId": -1, "ParentId": -1, "text": "测试机构名", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": -1000022, "Name": "自来水公司1", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 0, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "否", "PId": 0, "ParentId": 0, "text": "自来水公司1", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000020, "Name": "弓长", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "弓长", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1, "Name": "管理员", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": 0, "ParentId": 0, "text": "管理员", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000002, "Name": "李科学", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1000001, "ParentId": -1000001, "text": "李科学", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 2, "Name": "维护员", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "维护员", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000001, "Name": "魏勇", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "魏勇", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }, { "Id": 1000000, "Name": "覃宇", "DeptId": null, "DeptName": null, "GenderId": null, "GenderName": null, "CreateUserFlag": 1, "UserName": null, "PhoneNumber": null, "MobilePhone": null, "Address": null, "PostCode": null, "Email": null, "Remark": null, "JobIds": null, "JobNames": null, "RoleIds": null, "RoleNames": null, "CreateUserText": "是", "PId": -1, "ParentId": -1, "text": "覃宇", "children": null, "AuthorizationId": null, "CompanyID": null, "AuthorizedCompanyIDs": null, "OrganizationName": null }];
+
+      console.log(data)
+      js(data, 0)
+
+      var htm = ""
+      $.each(data, function (index, item) {
+        var li_hide = "li_hide";
+        var head_img = {
+          class: "head_img",
+          name: item.Name.substring(item.Name.length - 2)
+        };
+        if (item.PId == 0) {
+          li_hide = "";
         }
-
-        ul>li {
-            cursor: pointer;
-            height: 3rem;
-            line-height: 3rem;
-            display: inline-block;
-            width: 100%;
-            /* background: #F5F6F7; */
+        if (item.CreateUserFlag == 0) {
+          head_img = { class: "", name: "" };
         }
+        htm += `<li kid="${item.Id}" pid="${item.PId}" text="${item.Name}" class="${li_hide}">
+                  <div class="li_a">
+                    <div class="mui-input-row mui-checkbox mui-left">
+                      <label>
+                        <span class="${head_img.class}">${head_img.name}</span>
+                      ${item.Name}
+                      </label>
+                      <input name="checkbox" value="${item.Id}" type="checkbox">
+                    </div>
+                  </div>
+                  <div class="li_b" title="下一级">
+                    <span class="icon iconfont"></span> <span>下级</span>
+                  </div>
+                </li>`;
+      })
 
-        ul>li:hover {
-            background: #F5F6F7;
+      $("#my_ul").append(htm);
+
+      $(".li_b").click(function () {
+        //获取父元素
+        var sli = $(this).parent("li");
+        nextselect(sli);
+      });
+    });
+
+    function js(data, num) {
+      var count = 0;
+      for (var i = num; i < data.length; i++) {
+        var obj = data[i];
+        for (var j = 0; j < data.length; j++) {
+          var jobj = data[j];
+          if (obj.Id == jobj.PId && obj.r != true) {
+            data[i].r = true;
+            js(data, num++);
+          }
+          else {
+
+          }
         }
+      }
+    }
 
-        .li_a {
-            width: 80%;
-            float: left;
-        }
+    //选择下拉
+    function nextselect(self) {
+      var id = $(self).attr("kid");
+      var name = $(self).attr("text");
 
-        .li_b {
-            width: 15%;
-            float: right;
-            margin: 0 1rem 0 0;
-        }
-
-        .li_hide {
-            display: none;
-        }
-    </style>
-
-    <script>
-        $(function () {
-            $("#my_ul li").click(function () {
-                var id = $(this).attr("kid");
-                var name = $(this).attr("text");
-                select(id, name);
-            })
-        })
-
-        //选择下拉
-        function select(id, name) {
-            $("#my_ul>li").hide();
-            $("#my_ul>li[pid=" + id + "]").show();
-
-
-            $("#nav").append(
-                ' <a href="#" onclick="deldom(this),select(0,' + name + ')">'
-                + '<span>' + name + '</span>'
-                + '</a>'
-
-            );
-        }
-
-        //移除后面标签
-        function deldom(self) {
-            $(self).nextAll().remove();
-            $(self).remove();
-        }
-    </script>
+      $("#my_ul>li").hide();
+      $("#my_ul>li[pid=" + id + "]").show();
+      $("#nav>a").removeClass("nav_active");
+      $("#nav>a[kid='" + id + "']").addClass("nav_active");
+      $("#nav").append(
+        '<span class="slash"> > </span>'
+        + ' <a href="#" kid="' + id + '" text="' + name + '" class="nav_active" onclick="nextselect(this),deldom(this)">' +
+        "<span>" +
+        name +
+        "</span>" +
+        "</a>"
+      );
+    }
+    //移除后面标签
+    function deldom(self) {
+      $(self)
+        .nextAll()
+        .remove();
+    }
+  </script>
 </head>
 
 <body>
-    <div id="mydiv">
-        <div id="nav">
-            <a href="#" onclick="select(0,'公司'),deldom(this)">
-                <span>公司</span>
-            </a>
-            <span class="slash">/</span>
-            <a href="#" onclick="deldom(this),select(1,'总裁办公室')">
-                <span>总裁办公室</span>
-            </a>
-            <span class="slash">/</span>
-            <a href="#" onclick="deldom(this),select(2,'扫地地')">
-                <span>扫地地</span>
-            </a>
-        </div>
-
-        <ul id="my_ul">
-            <li kid="1" pid="0">
-                <div class="li_a">
-                    总裁办公室(8人)
-                </div>
-                <div class="li_b" title="下一级">
-                    <span class="icon iconfont"></span>
-                    <span>下级</span>
-                </div>
-            </li>
-            <li kid="2" pid="0">
-                <div class="li_a">
-                    总裁办公室(8人)
-                </div>
-                <div class="li_b" title="下一级">
-                    <span class="icon iconfont"></span>
-                    <span>下级</span>
-                </div>
-            </li>
-            <li kid="3" pid="0">
-                <div class="li_a">
-                    总裁办公室(8人)
-                </div>
-                <div class="li_b" title="下一级">
-                    <span class="icon iconfont"></span>
-                    <span>下级</span>
-                </div>
-            </li>
-            <li kid="4" pid="0">
-                <div class="li_a">
-                    管理员
-                </div>
-                <div class="li_b li_hide" title="下一级">
-                    <span class="icon iconfont"></span>
-                    <span>下级</span>
-                </div>
-            </li>
-            <li class="li_hide" kid="5" pid="1" text="移动事业组">
-                <div class="li_a">
-                    移动事业组
-                </div>
-                <div class="li_b" title="下一级">
-                    <span class="icon iconfont"></span>
-                    <span>下级</span>
-                </div>
-            </li>
-            <li class="li_hide" kid="6" pid="1">
-                <div class="li_a">
-                    基础业务组(8人)
-                </div>
-                <div class="li_b" title="下一级">
-                    <span class="icon iconfont"></span>
-                    <span>下级</span>
-                </div>
-            </li>
-            <li class="li_hide" kid="7" pid="1">
-                <div class="li_a">
-                    你大爷
-                </div>
-                <div class="li_b" title="下一级">
-                    <span class="icon iconfont"></span>
-                    <span>下级</span>
-                </div>
-            </li>
-        </ul>
+  <div id="mydiv">
+    <div id="nav">
+      <a href="#" kid="0" text="公司" class="sel nav_active" onclick="nextselect(this),deldom(this)">
+        <span>公司</span>
+      </a>
+      <!-- <span class="slash">/</span> -->
     </div>
+
+    <ul id="my_ul">
+      <li kid="1" pid="0" text="总裁办公室">
+        <div class="li_a">
+          <div class="mui-input-row mui-checkbox mui-left">
+            <label>
+              <span class="head_img">总裁</span>
+              总裁办公室
+            </label>
+            <input name="checkbox" value="1" type="checkbox">
+          </div>
+        </div>
+        <div class="li_b" title="下一级">
+          <span class="icon iconfont"></span> <span>下级</span>
+        </div>
+      </li>
+      <!--  <li kid="2" pid="0">
+        <div class="li_a">
+          <div class="mui-input-row mui-checkbox mui-left">
+            <label>总裁办公室</label>
+            <input name="checkbox" value="1" type="checkbox">
+          </div>
+        </div>
+        <div class="li_b" title="下一级">
+          <span class="icon iconfont"></span> <span>下级</span>
+        </div>
+      </li>
+      <li kid="3" pid="0">
+        <div class="li_a">
+          <div class="mui-input-row mui-checkbox mui-left">
+            <label>总裁办公室</label>
+            <input name="checkbox" value="1" type="checkbox">
+          </div>
+        </div>
+        <div class="li_b" title="下一级">
+          <span class="icon iconfont"></span> <span>下级</span>
+        </div>
+      </li>
+      <li kid="4" pid="0">
+        <div class="li_a">
+          <div class="mui-input-row mui-checkbox mui-left">
+            <label>管理员</label>
+            <input name="checkbox" value="1" type="checkbox">
+          </div>
+        </div>
+        <div class="li_b li_hide" title="下一级">
+          <span class="icon iconfont"></span> <span>下级</span>
+        </div>
+      </li>
+      <li class="li_hide" kid="5" pid="1" text="移动事业组">
+        <div class="li_a">
+          <div class="mui-input-row mui-checkbox mui-left">
+            <label>移动事业组</label>
+            <input name="checkbox" value="1" type="checkbox">
+          </div>
+        </div>
+        <div class="li_b" title="下一级">
+          <span class="icon iconfont"></span> <span>下级</span>
+        </div>
+      </li>
+      <li class="li_hide" kid="6" pid="1">
+        <div class="li_a">
+          <div class="mui-input-row mui-checkbox mui-left">
+            <label>基础业务组</label>
+            <input name="checkbox" value="1" type="checkbox">
+          </div>
+        </div>
+        <div class="li_b" title="下一级">
+          <span class="icon iconfont"></span> <span>下级</span>
+        </div>
+      </li>
+      <li class="li_hide" kid="7" pid="1">
+        <div class="li_a">
+          <div class="mui-input-row mui-checkbox mui-left">
+            <label>移动事业组</label>
+            <input name="checkbox" value="1" type="checkbox">
+          </div>
+        </div>
+        <div class="li_b" title="下一级">
+          <span class="icon iconfont"></span> <span>下级</span>
+        </div>
+      </li> -->
+    </ul>
+  </div>
 </body>
 
 </html>
