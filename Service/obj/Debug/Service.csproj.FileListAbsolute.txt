@@ -1,0 +1,9 @@
+D:\MyProject\Service\bin\Debug\Service.dll
+D:\MyProject\Service\bin\Debug\Service.pdb
+D:\MyProject\Service\bin\Debug\IService.dll
+D:\MyProject\Service\bin\Debug\IService.pdb
+D:\MyProject\Service\obj\Debug\Service.csprojAssemblyReference.cache
+D:\MyProject\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+D:\MyProject\Service\obj\Debug\Service.csproj.CopyComplete
+D:\MyProject\Service\obj\Debug\Service.dll
+D:\MyProject\Service\obj\Debug\Service.pdb
