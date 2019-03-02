@@ -24,16 +24,7 @@ namespace ConsoleTest.weiyong
 
         private static int Tj(List<Person> list,int PId)
         {
-            var person = list.Where(w => w.Id == PId);
-            if (person.Count()==0)
-            {
-                return 0;
-            }
-            else
-            {
-               
-                return Tj(list, );
-            }
+            return 1;
         }
 
         public static int shuliang(int n)

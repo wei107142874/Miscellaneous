@@ -1,4 +1,5 @@
 ﻿using ConsoleTest.weiyong;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,9 @@ namespace ConsoleTest
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
-        { 
-            Ts.Test();
+        {
+            string sql = "Insert Into t_wm (DJBH,RQ) Values ('123','2017/8/6 10:24')";
+            MysqlHelper.ExecuteReader(System.Data.CommandType.Text, sql);
             //测试签入
             Console.ReadKey();
         }

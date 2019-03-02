@@ -1,6 +1,5 @@
 D:\MyProject\IService\bin\Debug\IService.dll
 D:\MyProject\IService\bin\Debug\IService.pdb
-D:\MyProject\IService\obj\Debug\IService.csprojAssemblyReference.cache
 D:\MyProject\IService\obj\Debug\IService.csproj.CoreCompileInputs.cache
 D:\MyProject\IService\obj\Debug\IService.dll
 D:\MyProject\IService\obj\Debug\IService.pdb
