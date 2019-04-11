@@ -117,8 +117,10 @@
     <Compile Include="MVC通用类\MVCHelper.cs" />
     <Compile Include="newtonjson解决Json\JosnNetActionFilter.cs" />
     <Compile Include="newtonjson解决Json\JsonNetResult.cs" />
+    <Compile Include="NotStaticHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="定时任务Quartz\CommHelper.cs" />
+    <Compile Include="缓存\CacheHelper.cs" />
     <Compile Include="缩略图和水印\CommHelper.cs" />
     <Compile Include="邮件发送\CommHelper.cs" />
     <Compile Include="随机验证码\CommHelper.cs" />
